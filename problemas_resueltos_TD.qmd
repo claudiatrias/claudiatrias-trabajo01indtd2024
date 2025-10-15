@@ -75,6 +75,17 @@ knitr::kable(resumen_alt_op, caption = "Resumen Alternativas Óptimas - Caso Fav
 
 Luego, concluimos que la **alternativa óptima** es d3.
 
+Veamos el gráfico del Criterio de Hurwicz para los distintos valores de alpha:
+
+```{r, fig.height = 3}
+
+dibuja.criterio.Hurwicz(tb, favorable = TRUE)
+
+```
+
+Observamos que la alternativa óptima para todo los posibles valores de alpha en el intervalo [0,1] es d3. Luego no existe ningún punto de corte entre las rectas asociadas a las distintas alternativas.
+
+
 ```{r}
 
 # Caso desfavorable (Costes)
@@ -94,6 +105,23 @@ knitr::kable(resumen_alt_op, caption = "Resumen Alternativas Óptimas - Caso Des
 ```
 
 Luego se concluye que la **alternativa óptima** es d2, salvo bajo el criterio optimista que es d1.
+
+
+Veamos los gráficos del Criterio de Hurwicz para los distintos valores de alpha:
+
+```{r}
+dibuja.criterio.Hurwicz(tb, favorable = FALSE)
+
+```
+
+Observamos que para un valor de alpha en el intervalo (0.6, 0.8), la alternativa óptima pasa de ser la 2 a la 1. Veamos con el siguiente gráfico en que punto ocurre esto.
+
+```{r}
+
+dibuja.criterio.Hurwicz_Intervalos(tb, favorable = FALSE)
+
+```
+El punto en el que la alternativa óptima pasa de ser la segunda a la primera es 0.667.
 
 \newpage
 
@@ -141,3 +169,18 @@ tt(criterio.Todos(tb2, 0.3, favorable = FALSE), rownames = TRUE)
 ```
 
 Luego la alternativa óptima es montar en bici, salvo bajo el criterio de Wald (Criterio pesimista) que es correr.
+
+Añadimos los gráficos del Criterio de Hurwicz
+
+```{r}
+dibuja.criterio.Hurwicz(tb2, favorable = FALSE)
+```
+
+Observamos que para un valor de alpha en el intervalo (0.2, 0.4), la alternativa óptima pasa de ser la 2 a la 3. Veamos con el siguiente gráfico en que punto ocurre esto.
+
+```{r}
+dibuja.criterio.Hurwicz_Intervalos(tb2,favorable = FALSE)
+
+```
+
+El punto en el que la alternativa óptima pasa de ser la segunda a la tercera es 0.25.
