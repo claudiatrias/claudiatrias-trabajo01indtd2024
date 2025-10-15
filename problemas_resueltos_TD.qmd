@@ -168,7 +168,7 @@ tt(criterio.Todos(tb2, 0.3, favorable = FALSE), rownames = TRUE)
 
 ```
 
-Luego la alternativa óptima es montar en bici, salvo bajo el criterio de Wald (Criterio pesimista) que es correr.
+Luego la **alternativa óptima** es montar en bici, salvo bajo el criterio de Wald (Criterio pesimista) que es correr.
 
 Añadimos los gráficos del Criterio de Hurwicz
 
