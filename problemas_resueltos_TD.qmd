@@ -8,17 +8,13 @@ format:
 editor: visual
 ---
 
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
 # Problema 1
 
-Aplica los criterios de decisión bajo incertidumbre e indica cual es la alternativa
-óptima basándote en la siguiente tabla y teniendo en cuenta todos los posibles
-criterios de decisión. Considera el problema para ambas situaciones: costes y
-beneficios.
+Aplica los criterios de decisión bajo incertidumbre e indica cual es la alternativa óptima basándote en la siguiente tabla y teniendo en cuenta todos los posibles criterios de decisión. Considera el problema para ambas situaciones: costes y beneficios.
 
 NOTA: Usar las funciones individuales de incertidumbre por separado.
 
@@ -83,8 +79,7 @@ dibuja.criterio.Hurwicz(tb, favorable = TRUE)
 
 ```
 
-Observamos que la alternativa óptima para todo los posibles valores de alpha en el intervalo [0,1] es d3. Luego no existe ningún punto de corte entre las rectas asociadas a las distintas alternativas.
-
+Observamos que la alternativa óptima para todo los posibles valores de alpha en el intervalo \[0,1\] es d3. Luego no existe ningún punto de corte entre las rectas asociadas a las distintas alternativas.
 
 ```{r}
 
@@ -106,7 +101,6 @@ knitr::kable(resumen_alt_op, caption = "Resumen Alternativas Óptimas - Caso Des
 
 Luego se concluye que la **alternativa óptima** es d2, salvo bajo el criterio optimista que es d1.
 
-
 Veamos los gráficos del Criterio de Hurwicz para los distintos valores de alpha:
 
 ```{r}
@@ -121,30 +115,20 @@ Observamos que para un valor de alpha en el intervalo (0.6, 0.8), la alternativa
 dibuja.criterio.Hurwicz_Intervalos(tb, favorable = FALSE)
 
 ```
+
 El punto en el que la alternativa óptima pasa de ser la segunda a la primera es 0.667.
 
 \newpage
 
 # Problema 2
 
-Paula y Claudia quieren hacer algo de deporte el fin de semana. Deciden que el día
-que mejor les viene es el domingo, pero no se ponen de acuerdo en el deporte que hacer.
-A ver si usted puede ayudarles. Tienen las siguientes opciones:
+Paula y Claudia quieren hacer algo de deporte el fin de semana. Deciden que el día que mejor les viene es el domingo, pero no se ponen de acuerdo en el deporte que hacer. A ver si usted puede ayudarles. Tienen las siguientes opciones:
 
-- Hacer escalada en un rocódromo. El equipo de escalada ya lo tienen
-pero han de pagar por la hora de uso de las instalaciones 20 euros por persona. Planean
-estar dos horas y la vuelta la harán andando si no llueve y en uber si, por el contrario,
-llueve. El precio del uber será 15 euros entre las dos.
+-   Hacer escalada en un rocódromo. El equipo de escalada ya lo tienen pero han de pagar por la hora de uso de las instalaciones 20 euros por persona. Planean estar dos horas y la vuelta la harán andando si no llueve y en uber si, por el contrario, llueve. El precio del uber será 15 euros entre las dos.
 
-- Salir a correr por el parque de al lado de su casa. Si decidiesen esto, deberían
-comprarse unos zapatos adecuados para ello, que les costarían 45 euros a cada una. La vuelta
-la harían andando, lloviese o no, pues no se van a alejar mucho de su casa.
+-   Salir a correr por el parque de al lado de su casa. Si decidiesen esto, deberían comprarse unos zapatos adecuados para ello, que les costarían 45 euros a cada una. La vuelta la harían andando, lloviese o no, pues no se van a alejar mucho de su casa.
 
-- Montar en bici. Para ello, tendrían que alquilarlas en una tienda cerca de su casa.
-El precio de alquiler es de 15 euros por hora y por persona. La vuelta la harían en bici
-si no llueve y en uber si llueve. Teniendo en cuenta que el uber ha de ser especial pues
-tiene que tener sitio para dos bicicletas, el precio es de 40 euros entre las dos.
-
+-   Montar en bici. Para ello, tendrían que alquilarlas en una tienda cerca de su casa. El precio de alquiler es de 15 euros por hora y por persona. La duracion de la ruta será de dos horas. La vuelta la harían en bici si no llueve y en uber si llueve. Teniendo en cuenta que el uber ha de ser especial pues tiene que tener sitio para dos bicicletas, el precio es de 40 euros entre las dos.
 
 ¿Qué les recomienda usted que hagan, si su objetivo es minimizar los costes?
 
@@ -176,11 +160,11 @@ Añadimos los gráficos del Criterio de Hurwicz
 dibuja.criterio.Hurwicz(tb2, favorable = FALSE)
 ```
 
-Observamos que para un valor de alpha en el intervalo (0.2, 0.4), la alternativa óptima pasa de ser la 2 a la 3. Veamos con el siguiente gráfico en que punto ocurre esto.
+Observamos que para un valor de alpha en el intervalo (0.2, 0.4), la alternativa óptima pasa de ser la 2 (Correr) a la 3 (Montar en bici). Veamos con el siguiente gráfico en que punto ocurre esto.
 
 ```{r}
 dibuja.criterio.Hurwicz_Intervalos(tb2,favorable = FALSE)
 
 ```
 
-El punto en el que la alternativa óptima pasa de ser la segunda a la tercera es 0.25.
+El punto en el que la alternativa óptima pasa de ser la segunda (Correr) a la tercera (Montar en bici) es 0.25.
